@@ -1,2 +1,53 @@
-# Lnreader-Kavita
-A fork of Dom53 repo for kavita.
+# Kavita Plugin for LNReader (Testing Repo)
+
+This repository only serves as a test source for installing the Kavita plugin in LNReader.
+
+The actual plugin code and development happen here:
+https://github.com/dom-53/lnreader-plugins/blob/plugin/kavita/plugins/multi/kavita.ts
+
+## How to install in LNReader
+
+1. Add this URL to your plugin sources:
+
+```
+https://raw.githubusercontent.com/dom-53/lnreader-kavita-testing/refs/heads/main/plugins.min.json
+```
+
+2. In Browse settings, make sure to enable the language  `multi`, otherwise the Kavita plugin will not appear.
+
+Feel free to report bugs or request features in the main repo.
+
+# ⚠️ Disclaimer ⚠️
+
+This is a testing repository. It’s recommended to back up your LNReader data before using it, just to be safe. You never know.
+
+Feel free to report bugs or request features in the main repo.
+
+# Changelog
+
+## v0.0.9
+
+- Fixed server URL and API key arriving as `undefined`: settings were read once when the plugin loaded, so values saved later were never seen. They are now read on every request.
+- Server URL is normalised (trailing slash removed, `https://` added if missing, a pasted `/api/opds/...` link is trimmed to the base URL).
+- API key field also accepts a pasted OPDS URL; the key is extracted from it.
+- Clear error message when URL or API key is not set, instead of a malformed `undefined/...` request.
+- Auth token is refreshed after 10 minutes or when URL/API key change.
+- Auth token is no longer written to the log.
+- Filter loading failures no longer cause unhandled promise rejections; fixed "Tagy" label typo.
+
+## v0.0.8 - 2025-11-20
+
+- Added support for loading and applying Kavita’s preset filters (decoded and sent as-is, bypassing manual inputs).
+- Introduced sortable results with selectable sort field and direction.
+- Added a limit filter to cap returned items (0 leaves results unbounded).
+- Added a three-state “Want to read” filter (any / must be marked / must not be marked).
+- Added include/exclude filtering by collections (CollectionTags)
+- Reordered filter UI for clearer flow
+
+## v0.0.7 - 2025-11-19
+
+- Fixed title search to correctly respect plugin format settings during queries
+
+## v0.0.5 - 2025-11-19
+
+- Fix duplicate results when searching novels by name
