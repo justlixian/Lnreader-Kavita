@@ -25,10 +25,6 @@ Feel free to report bugs or request features in the main repo.
 
 # Changelog
 
-## v0.0.10
-
-- Much faster novel page loading: per-file book info and table of contents are now fetched in parallel (8 at a time) instead of one after another.
-
 ## v0.0.9
 
 - Fixed server URL and API key arriving as `undefined`: settings were read once when the plugin loaded, so values saved later were never seen. They are now read on every request.
