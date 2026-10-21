@@ -10,7 +10,7 @@ https://github.com/dom-53/lnreader-plugins/blob/plugin/kavita/plugins/multi/kavi
 1. Add this URL to your plugin sources:
 
 ```
-https://raw.githubusercontent.com/dom-53/lnreader-kavita-testing/refs/heads/main/plugins.min.json
+https://raw.githubusercontent.com/justlixian/Lnreader-Kavita/refs/heads/main/plugins.min.json
 ```
 
 2. In Browse settings, make sure to enable the language  `multi`, otherwise the Kavita plugin will not appear.
