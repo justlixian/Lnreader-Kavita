@@ -25,6 +25,11 @@ Feel free to report bugs or request features in the main repo.
 
 # Changelog
 
+## v0.0.11
+
+- Chapters now follow the EPUB table of contents (one LNReader chapter per book chapter) instead of one chapter per page. A chapter loads all of its pages in one go.
+- EPUBs with no table of contents become a single chapter. Old per-page chapter paths still open.
+
 ## v0.0.10
 
 - Much faster novel page loading: per-file book info and table of contents are now fetched in parallel (8 at a time) instead of one after another.
