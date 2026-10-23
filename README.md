@@ -25,6 +25,14 @@ Feel free to report bugs or request features in the main repo.
 
 # Changelog
 
+## v0.0.13
+
+- Faster first load of the browse list: filter options (tags, genres, libraries, collections, presets) are now fetched in parallel and in the background instead of six sequential requests blocking the first page. Duplicate concurrent loads are merged.
+
+## v0.0.12
+
+- Novel summaries no longer show raw HTML tags (`<p>`, `<br>`, entities are cleaned).
+
 ## v0.0.11
 
 - Chapters now follow the EPUB table of contents (one LNReader chapter per book chapter) instead of one chapter per page. A chapter loads all of its pages in one go.
